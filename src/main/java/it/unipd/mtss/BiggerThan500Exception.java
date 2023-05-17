@@ -4,8 +4,8 @@
 ////////////////////////////////////////////////////////////////////
 package it.unipd.mtss;
 
-public class BiggerThan100Exception  extends Exception{
-    public BiggerThan100Exception(){
-        super("Non sono supportati numeri maggiori di 100");
+public class BiggerThan500Exception  extends Exception{
+    public BiggerThan500Exception(){
+        super("Non sono supportati numeri maggiori di 500");
     }
 }

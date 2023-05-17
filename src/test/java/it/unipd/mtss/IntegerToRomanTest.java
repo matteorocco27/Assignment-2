@@ -18,7 +18,7 @@ public class IntegerToRomanTest {
 	}
 
 	@Test
-	public void Convert3() throws ZeroException, BiggerThan100Exception, NegativeNumberException{
+	public void Convert3() throws ZeroException, BiggerThan500Exception, NegativeNumberException{
 
 		int arabic=3;
 		String roman="III";
@@ -27,7 +27,7 @@ public class IntegerToRomanTest {
 	}
 
 	@Test
-	public void Convert6() throws ZeroException, BiggerThan100Exception, NegativeNumberException{
+	public void Convert6() throws ZeroException, BiggerThan500Exception, NegativeNumberException{
 		int arabic=6;
 		String roman="VI";
 
@@ -35,7 +35,7 @@ public class IntegerToRomanTest {
 	}
 
 	@Test
-	public void Convert10() throws ZeroException, BiggerThan100Exception, NegativeNumberException{
+	public void Convert10() throws ZeroException, BiggerThan500Exception, NegativeNumberException{
 		int arabic=10;
 		String roman="X";
 
@@ -44,7 +44,7 @@ public class IntegerToRomanTest {
 
 
 	@Test
-	public void Convert20() throws ZeroException, BiggerThan100Exception, NegativeNumberException{
+	public void Convert20() throws ZeroException, BiggerThan500Exception, NegativeNumberException{
 		int arabic=20;
 		String roman="XX";
 
@@ -52,7 +52,7 @@ public class IntegerToRomanTest {
 	}
 
 	@Test
-	public void Convert50() throws ZeroException, BiggerThan100Exception, NegativeNumberException{
+	public void Convert50() throws ZeroException, BiggerThan500Exception, NegativeNumberException{
 		int arabic=50;
 		String roman="L";
 
@@ -60,31 +60,47 @@ public class IntegerToRomanTest {
 	}
 
 	@Test
-	public void Convert100() throws ZeroException, BiggerThan100Exception, NegativeNumberException{
+	public void Convert100() throws ZeroException, BiggerThan500Exception, NegativeNumberException{
 		int arabic=100;
 		String roman="C";
 
 		assertEquals(IntegerToRoman.convert(arabic), roman);
 	}
 
+	@Test
+	public void Convert200() throws ZeroException, BiggerThan500Exception, NegativeNumberException{
+		int arabic=200;
+		String roman="CC";
+
+		assertEquals(IntegerToRoman.convert(arabic), roman);
+	}
+
+	@Test
+	public void Convert500() throws ZeroException, BiggerThan500Exception, NegativeNumberException{
+		int arabic=500;
+		String roman="D";
+
+		assertEquals(IntegerToRoman.convert(arabic), roman);
+	}
+
 	//Testing exception
 	@Test(expected = ZeroException.class)
-	public void ConvertZero() throws ZeroException, BiggerThan100Exception, NegativeNumberException{
+	public void ConvertZero() throws ZeroException, BiggerThan500Exception, NegativeNumberException{
 		int zero=0;
 
 		IntegerToRoman.convert(zero);
 	}
 
 	@Test(expected = NegativeNumberException.class)
-	public void NegativeNumber() throws ZeroException, BiggerThan100Exception, NegativeNumberException{
+	public void NegativeNumber() throws ZeroException, BiggerThan500Exception, NegativeNumberException{
 		int negative=-1;
 
 		IntegerToRoman.convert(negative);
 	}
 
-	@Test(expected = BiggerThan100Exception.class)
-	public void GreaterThan100() throws ZeroException, BiggerThan100Exception, NegativeNumberException{
-		int bigger=130;
+	@Test(expected = BiggerThan500Exception.class)
+	public void GreaterThan500() throws ZeroException, BiggerThan500Exception, NegativeNumberException{
+		int bigger=540;
 
 		IntegerToRoman.convert(bigger);
 	}
@@ -92,17 +108,17 @@ public class IntegerToRomanTest {
 
 	//Testing random numbers
 	@Test
-	public void Convert96() throws ZeroException, BiggerThan100Exception, NegativeNumberException{
-		int arabic=96;
-		String roman="XCVI";
+	public void Convert346() throws ZeroException, BiggerThan500Exception, NegativeNumberException{
+		int arabic=346;
+		String roman="CCCXLVI";
 
 		assertEquals(IntegerToRoman.convert(arabic), roman);
 	}
 
 	@Test
-	public void Convert83() throws ZeroException, BiggerThan100Exception, NegativeNumberException{
-		int arabic=83;
-		String roman="LXXXIII";
+	public void Convert443() throws ZeroException, BiggerThan500Exception, NegativeNumberException{
+		int arabic=443;
+		String roman="CDXLIII";
 
 		assertEquals(IntegerToRoman.convert(arabic), roman);
 	}

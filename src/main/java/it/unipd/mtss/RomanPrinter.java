@@ -7,7 +7,7 @@ package it.unipd.mtss;
 
 
 public class RomanPrinter {
-    public static String print(int number) throws ZeroException, NegativeNumberException, BiggerThan100Exception {
+    public static String print(int number) throws ZeroException, NegativeNumberException, BiggerThan500Exception {
         return printAsciiArt(IntegerToRoman.convert(number));
     }
 
@@ -58,6 +58,17 @@ public class RomanPrinter {
                 "  \\_____|  "
         };
 
+
+        String[] D = {
+                "  ____    ",
+                " |  __ \\  ",
+                " | |  | | ",
+                " | |  | | ",
+                " | |__| | ",
+                " |_____/  "
+        };
+
+
         String result = "";
 
 
@@ -78,6 +89,9 @@ public class RomanPrinter {
                 }
                 if (c == 'C') {
                     result += C[j];
+                }
+                if (c == 'D') {
+                    result += D[j];
                 }
 
             }
