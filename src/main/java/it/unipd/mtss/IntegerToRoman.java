@@ -5,13 +5,13 @@
 
 package it.unipd.mtss;
 public class IntegerToRoman {
-public static String convert(int number) throws ZeroException, NegativeNumberException, BiggerThan3Exception{
+public static String convert(int number) throws ZeroException, NegativeNumberException, BiggerThan6Exception{
     if(number==0) {throw new ZeroException(); }
     if(number<0) {throw new NegativeNumberException();}
-    if(number>3) {throw new BiggerThan3Exception();}
+    if(number>6) {throw new BiggerThan6Exception();}
 
-    int[] values = {4, 1};
-    String[] romanLetters = {"IV", "I"};
+    int[] values = {9, 5, 4, 1};
+    String[] romanLetters = {"IX", "V", "IV", "I"};
     StringBuilder roman = new StringBuilder();
     for (int i = 0; i < values.length; i++) {
     while (number >= values[i]) {

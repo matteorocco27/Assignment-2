@@ -4,8 +4,8 @@
 ////////////////////////////////////////////////////////////////////
 package it.unipd.mtss;
 
-public class ZeroException extends Exception{
-    public ZeroException(){
-        super("Zero non esiste in notazione romana");
+public class BiggerThan6Exception  extends Exception{
+    public BiggerThan6Exception(){
+        super("Non sono supportati numeri maggiori di 6");
     }
 }
