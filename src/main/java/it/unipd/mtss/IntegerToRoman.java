@@ -8,7 +8,7 @@ public class IntegerToRoman {
 public static String convert(int number) throws ZeroException, NegativeNumberException, BiggerThan20Exception{
     if(number==0) {throw new ZeroException(); }
     if(number<0) {throw new NegativeNumberException();}
-    if(number>20) {throw new BiggerThan1000Exception();}
+    if(number>20) {throw new BiggerThan20Exception();}
 
     int[] values = {40, 10, 9, 5, 4, 1};
     String[] romanLetters = {"XL", "X", "IX", "V", "IV", "I"};

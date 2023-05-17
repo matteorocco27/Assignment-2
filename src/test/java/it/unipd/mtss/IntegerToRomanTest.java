@@ -18,7 +18,7 @@ public class IntegerToRomanTest {
 	}
 
 	@Test
-	public void Convert3() throws ZeroException, BiggerThan1000Exception, NegativeNumberException{
+	public void Convert3() throws ZeroException, BiggerThan20Exception, NegativeNumberException{
 
 		int arabic=3;
 		String roman="III";
@@ -27,7 +27,7 @@ public class IntegerToRomanTest {
 	}
 
 	@Test
-	public void Convert6() throws ZeroException, BiggerThan1000Exception, NegativeNumberException{
+	public void Convert6() throws ZeroException, BiggerThan20Exception, NegativeNumberException{
 		int arabic=6;
 		String roman="VI";
 
@@ -35,7 +35,7 @@ public class IntegerToRomanTest {
 	}
 
 	@Test
-	public void Convert10() throws ZeroException, BiggerThan1000Exception, NegativeNumberException{
+	public void Convert10() throws ZeroException, BiggerThan20Exception, NegativeNumberException{
 		int arabic=10;
 		String roman="X";
 
@@ -44,7 +44,7 @@ public class IntegerToRomanTest {
 
 
 	@Test
-	public void Convert20() throws ZeroException, BiggerThan1000Exception, NegativeNumberException{
+	public void Convert20() throws ZeroException, BiggerThan20Exception, NegativeNumberException{
 		int arabic=20;
 		String roman="XX";
 
