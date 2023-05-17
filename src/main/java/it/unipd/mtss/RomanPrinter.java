@@ -7,7 +7,7 @@ package it.unipd.mtss;
 
 
 public class RomanPrinter {
-    public static String print(int number) throws ZeroException, NegativeNumberException, BiggerThan10Exception {
+    public static String print(int number) throws ZeroException, NegativeNumberException, BiggerThan20Exception {
         return printAsciiArt(IntegerToRoman.convert(number));
     }
 

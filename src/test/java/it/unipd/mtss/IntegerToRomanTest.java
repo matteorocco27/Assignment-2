@@ -18,7 +18,7 @@ public class IntegerToRomanTest {
 	}
 
 	@Test
-	public void Convert3() throws ZeroException, BiggerThan10Exception, NegativeNumberException{
+	public void Convert3() throws ZeroException, BiggerThan1000Exception, NegativeNumberException{
 
 		int arabic=3;
 		String roman="III";
@@ -27,7 +27,7 @@ public class IntegerToRomanTest {
 	}
 
 	@Test
-	public void Convert6() throws ZeroException, BiggerThan10Exception, NegativeNumberException{
+	public void Convert6() throws ZeroException, BiggerThan1000Exception, NegativeNumberException{
 		int arabic=6;
 		String roman="VI";
 
@@ -35,7 +35,7 @@ public class IntegerToRomanTest {
 	}
 
 	@Test
-	public void Convert10() throws ZeroException, BiggerThan10Exception, NegativeNumberException{
+	public void Convert10() throws ZeroException, BiggerThan1000Exception, NegativeNumberException{
 		int arabic=10;
 		String roman="X";
 
@@ -43,24 +43,33 @@ public class IntegerToRomanTest {
 	}
 
 
+	@Test
+	public void Convert20() throws ZeroException, BiggerThan1000Exception, NegativeNumberException{
+		int arabic=20;
+		String roman="XX";
+
+		assertEquals(IntegerToRoman.convert(arabic), roman);
+	}
+
+
 	//Testing exception
 	@Test(expected = ZeroException.class)
-	public void ConvertZero() throws ZeroException, BiggerThan10Exception, NegativeNumberException{
+	public void ConvertZero() throws ZeroException, BiggerThan20Exception, NegativeNumberException{
 		int zero=0;
 
 		IntegerToRoman.convert(zero);
 	}
 
 	@Test(expected = NegativeNumberException.class)
-	public void NegativeNumber() throws ZeroException, BiggerThan10Exception, NegativeNumberException{
+	public void NegativeNumber() throws ZeroException, BiggerThan20Exception, NegativeNumberException{
 		int negative=-1;
 
 		IntegerToRoman.convert(negative);
 	}
 
-	@Test(expected = BiggerThan10Exception.class)
-	public void GreaterThan10() throws ZeroException, BiggerThan10Exception, NegativeNumberException{
-		int bigger=40;
+	@Test(expected = BiggerThan20Exception.class)
+	public void GreaterThan20() throws ZeroException, BiggerThan20Exception, NegativeNumberException{
+		int bigger=30;
 
 		IntegerToRoman.convert(bigger);
 	}
@@ -68,17 +77,17 @@ public class IntegerToRomanTest {
 
 	//Testing random numbers
 	@Test
-	public void Convert9() throws ZeroException, BiggerThan10Exception, NegativeNumberException{
-		int arabic=9;
-		String roman="IX";
+	public void Convert18() throws ZeroException, BiggerThan20Exception, NegativeNumberException{
+		int arabic=18;
+		String roman="XVIII";
 
 		assertEquals(IntegerToRoman.convert(arabic), roman);
 	}
 
 	@Test
-	public void Convert7() throws ZeroException, BiggerThan10Exception, NegativeNumberException{
-		int arabic=7;
-		String roman="VII";
+	public void Convert19() throws ZeroException, BiggerThan20Exception, NegativeNumberException{
+		int arabic=19;
+		String roman="XIX";
 
 		assertEquals(IntegerToRoman.convert(arabic), roman);
 	}
