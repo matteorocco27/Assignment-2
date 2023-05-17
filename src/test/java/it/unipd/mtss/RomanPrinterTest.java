@@ -19,7 +19,7 @@ public class RomanPrinterTest {
 
 	@Test
 	public void Print1() throws NegativeNumberException, ZeroException,
-			BiggerThan6Exception {
+			BiggerThan10Exception {
 		int number= 1;
 		String ascii= RomanPrinter.print(number);
 		String I =(
@@ -35,7 +35,7 @@ public class RomanPrinterTest {
 
 
 	@Test
-	public void Print5() throws NegativeNumberException, ZeroException, BiggerThan6Exception  {
+	public void Print5() throws NegativeNumberException, ZeroException, BiggerThan10Exception  {
 		int number= 5;
 		String ascii= RomanPrinter.print(number);
 		String V =(
@@ -47,6 +47,22 @@ public class RomanPrinterTest {
 						"     \\/     \n");
 
 		assertEquals(V , ascii);
+	}
+
+
+	@Test
+	public void Print10() throws NegativeNumberException, ZeroException, BiggerThan10Exception {
+		int number= 10;
+		String ascii= RomanPrinter.print(number);
+		String X =(" __   __  \n"+
+				" \\ \\ / /  \n"+
+				"  \\ V /   \n"+
+				"   > <    \n"+
+				"  / . \\   \n"+
+				" /_/ \\_\\  \n"
+		);
+
+		assertEquals(X , ascii);
 	}
 
 }

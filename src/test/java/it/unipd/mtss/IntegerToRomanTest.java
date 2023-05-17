@@ -18,7 +18,7 @@ public class IntegerToRomanTest {
 	}
 
 	@Test
-	public void Convert3() throws ZeroException, BiggerThan6Exception, NegativeNumberException{
+	public void Convert3() throws ZeroException, BiggerThan10Exception, NegativeNumberException{
 
 		int arabic=3;
 		String roman="III";
@@ -27,9 +27,17 @@ public class IntegerToRomanTest {
 	}
 
 	@Test
-	public void Convert6() throws ZeroException, BiggerThan6Exception, NegativeNumberException{
+	public void Convert6() throws ZeroException, BiggerThan10Exception, NegativeNumberException{
 		int arabic=6;
 		String roman="VI";
+
+		assertEquals(IntegerToRoman.convert(arabic), roman);
+	}
+
+	@Test
+	public void Convert10() throws ZeroException, BiggerThan10Exception, NegativeNumberException{
+		int arabic=10;
+		String roman="X";
 
 		assertEquals(IntegerToRoman.convert(arabic), roman);
 	}
@@ -37,22 +45,22 @@ public class IntegerToRomanTest {
 
 	//Testing exception
 	@Test(expected = ZeroException.class)
-	public void ConvertZero() throws ZeroException, BiggerThan6Exception, NegativeNumberException{
+	public void ConvertZero() throws ZeroException, BiggerThan10Exception, NegativeNumberException{
 		int zero=0;
 
 		IntegerToRoman.convert(zero);
 	}
 
 	@Test(expected = NegativeNumberException.class)
-	public void NegativeNumber() throws ZeroException, BiggerThan6Exception, NegativeNumberException{
+	public void NegativeNumber() throws ZeroException, BiggerThan10Exception, NegativeNumberException{
 		int negative=-1;
 
 		IntegerToRoman.convert(negative);
 	}
 
-	@Test(expected = BiggerThan6Exception.class)
-	public void GreaterThan6() throws ZeroException, BiggerThan6Exception, NegativeNumberException{
-		int bigger=10;
+	@Test(expected = BiggerThan10Exception.class)
+	public void GreaterThan10() throws ZeroException, BiggerThan10Exception, NegativeNumberException{
+		int bigger=40;
 
 		IntegerToRoman.convert(bigger);
 	}
@@ -60,17 +68,17 @@ public class IntegerToRomanTest {
 
 	//Testing random numbers
 	@Test
-	public void Convert4() throws ZeroException, BiggerThan6Exception, NegativeNumberException{
-		int arabic=4;
-		String roman="IV";
+	public void Convert9() throws ZeroException, BiggerThan10Exception, NegativeNumberException{
+		int arabic=9;
+		String roman="IX";
 
 		assertEquals(IntegerToRoman.convert(arabic), roman);
 	}
 
 	@Test
-	public void Convert() throws ZeroException, BiggerThan6Exception, NegativeNumberException{
-		int arabic=5;
-		String roman="V";
+	public void Convert7() throws ZeroException, BiggerThan10Exception, NegativeNumberException{
+		int arabic=7;
+		String roman="VII";
 
 		assertEquals(IntegerToRoman.convert(arabic), roman);
 	}
