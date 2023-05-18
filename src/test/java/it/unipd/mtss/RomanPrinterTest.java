@@ -18,7 +18,7 @@ public class RomanPrinterTest {
 	}
 
 	@Test
-	public void Print1() throws NegativeNumberException, ZeroException,
+	public void print1() throws NegativeNumberException, ZeroException,
 			BiggerThan1000Exception {
 		int number= 1;
 		String ascii= RomanPrinter.print(number);
@@ -35,7 +35,7 @@ public class RomanPrinterTest {
 
 
 	@Test
-	public void Print5() throws NegativeNumberException, ZeroException, BiggerThan1000Exception  {
+	public void print5() throws NegativeNumberException, ZeroException, BiggerThan1000Exception  {
 		int number= 5;
 		String ascii= RomanPrinter.print(number);
 		String V =(
@@ -51,7 +51,7 @@ public class RomanPrinterTest {
 
 
 	@Test
-	public void Print10() throws NegativeNumberException, ZeroException, BiggerThan1000Exception {
+	public void print10() throws NegativeNumberException, ZeroException, BiggerThan1000Exception {
 		int number= 10;
 		String ascii= RomanPrinter.print(number);
 		String X =(" __   __  \n"+
@@ -67,7 +67,7 @@ public class RomanPrinterTest {
 
 
 	@Test
-	public void Print50() throws NegativeNumberException, ZeroException, BiggerThan1000Exception {
+	public void print50() throws NegativeNumberException, ZeroException, BiggerThan1000Exception {
 		int number= 50;
 		String ascii= RomanPrinter.print(number);
 		String L =(
@@ -84,7 +84,7 @@ public class RomanPrinterTest {
 
 
 	@Test
-	public void Print100() throws NegativeNumberException, ZeroException, BiggerThan1000Exception {
+	public void print100() throws NegativeNumberException, ZeroException, BiggerThan1000Exception {
 		int number= 100;
 		String ascii= RomanPrinter.print(number);
 		String C =(
@@ -100,7 +100,7 @@ public class RomanPrinterTest {
 	}
 
 	@Test
-	public void Print500() throws NegativeNumberException, ZeroException, BiggerThan1000Exception {
+	public void print500() throws NegativeNumberException, ZeroException, BiggerThan1000Exception {
 		int number= 500;
 		String ascii= RomanPrinter.print(number);
 		String D =(
@@ -116,7 +116,7 @@ public class RomanPrinterTest {
 	}
 
 	@Test
-	public void Print1000() throws NegativeNumberException, ZeroException, BiggerThan1000Exception {
+	public void print1000() throws NegativeNumberException, ZeroException, BiggerThan1000Exception {
 		int number= 1000;
 		String ascii= RomanPrinter.print(number);
 		String M =(

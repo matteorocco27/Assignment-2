@@ -13,12 +13,12 @@ public class IntegerToRomanTest {
 	static IntegerToRoman converter;
 
 	@BeforeClass
-	public static void StartConverter() {
+	public static void startConverter() {
 		converter = new IntegerToRoman();
 	}
 
 	@Test
-	public void Convert3() throws ZeroException, BiggerThan1000Exception, NegativeNumberException{
+	public void convert3() throws ZeroException, BiggerThan1000Exception, NegativeNumberException{
 
 		int arabic=3;
 		String roman="III";
@@ -27,7 +27,7 @@ public class IntegerToRomanTest {
 	}
 
 	@Test
-	public void Convert6() throws ZeroException, BiggerThan1000Exception, NegativeNumberException{
+	public void convert6() throws ZeroException, BiggerThan1000Exception, NegativeNumberException{
 		int arabic=6;
 		String roman="VI";
 
@@ -35,7 +35,7 @@ public class IntegerToRomanTest {
 	}
 
 	@Test
-	public void Convert10() throws ZeroException, BiggerThan1000Exception, NegativeNumberException{
+	public void convert10() throws ZeroException, BiggerThan1000Exception, NegativeNumberException{
 		int arabic=10;
 		String roman="X";
 
@@ -44,7 +44,7 @@ public class IntegerToRomanTest {
 
 
 	@Test
-	public void Convert20() throws ZeroException, BiggerThan1000Exception, NegativeNumberException{
+	public void convert20() throws ZeroException, BiggerThan1000Exception, NegativeNumberException{
 		int arabic=20;
 		String roman="XX";
 
@@ -52,7 +52,7 @@ public class IntegerToRomanTest {
 	}
 
 	@Test
-	public void Convert50() throws ZeroException, BiggerThan1000Exception, NegativeNumberException{
+	public void convert50() throws ZeroException, BiggerThan1000Exception, NegativeNumberException{
 		int arabic=50;
 		String roman="L";
 
@@ -60,7 +60,7 @@ public class IntegerToRomanTest {
 	}
 
 	@Test
-	public void Convert100() throws ZeroException, BiggerThan1000Exception, NegativeNumberException{
+	public void convert100() throws ZeroException, BiggerThan1000Exception, NegativeNumberException{
 		int arabic=100;
 		String roman="C";
 
@@ -68,7 +68,7 @@ public class IntegerToRomanTest {
 	}
 
 	@Test
-	public void Convert200() throws ZeroException, BiggerThan1000Exception, NegativeNumberException{
+	public void convert200() throws ZeroException, BiggerThan1000Exception, NegativeNumberException{
 		int arabic=200;
 		String roman="CC";
 
@@ -76,7 +76,7 @@ public class IntegerToRomanTest {
 	}
 
 	@Test
-	public void Convert500() throws ZeroException, BiggerThan1000Exception, NegativeNumberException{
+	public void convert500() throws ZeroException, BiggerThan1000Exception, NegativeNumberException{
 		int arabic=500;
 		String roman="D";
 
@@ -84,7 +84,7 @@ public class IntegerToRomanTest {
 	}
 
 	@Test
-	public void Convert1000() throws ZeroException, BiggerThan1000Exception, NegativeNumberException{
+	public void convert1000() throws ZeroException, BiggerThan1000Exception, NegativeNumberException{
 		int arabic=1000;
 		String roman="M";
 
@@ -93,21 +93,21 @@ public class IntegerToRomanTest {
 
 	//Testing exception
 	@Test(expected = ZeroException.class)
-	public void ConvertZero() throws ZeroException, BiggerThan1000Exception, NegativeNumberException{
+	public void convertZero() throws ZeroException, BiggerThan1000Exception, NegativeNumberException{
 		int zero=0;
 
 		IntegerToRoman.convert(zero);
 	}
 
 	@Test(expected = NegativeNumberException.class)
-	public void NegativeNumber() throws ZeroException, BiggerThan1000Exception, NegativeNumberException{
+	public void negativeNumber() throws ZeroException, BiggerThan1000Exception, NegativeNumberException{
 		int negative=-1;
 
 		IntegerToRoman.convert(negative);
 	}
 
 	@Test(expected = BiggerThan1000Exception.class)
-	public void GreaterThan1000() throws ZeroException, BiggerThan1000Exception, NegativeNumberException{
+	public void greaterThan1000() throws ZeroException, BiggerThan1000Exception, NegativeNumberException{
 		int bigger=4000;
 
 		IntegerToRoman.convert(bigger);
@@ -116,7 +116,7 @@ public class IntegerToRomanTest {
 
 	//Testing random numbers
 	@Test
-	public void Convert185() throws ZeroException, BiggerThan1000Exception, NegativeNumberException{
+	public void convert185() throws ZeroException, BiggerThan1000Exception, NegativeNumberException{
 		int arabic=185;
 		String roman="CLXXXV";
 
@@ -124,7 +124,7 @@ public class IntegerToRomanTest {
 	}
 
 	@Test
-	public void Convert889() throws ZeroException, BiggerThan1000Exception, NegativeNumberException{
+	public void convert889() throws ZeroException, BiggerThan1000Exception, NegativeNumberException{
 		int arabic=889;
 		String roman="DCCCLXXXIX";
 
